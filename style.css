@@ -1,0 +1,444 @@
+/* Apply brand typography */
+@font-face {
+    font-family: 'BIC UDGothic';
+    src: url('path/to/BICUDGothic.woff2') format('woff2'); /* Ensure the correct path */
+}
+
+body {
+    font-family: 'BIC UDGothic', sans-serif;
+    background-color: #293040; /* Background */
+    color: #DEE0E4; /* Primary text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Default light mode styles */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Header & Navigation */
+header {
+    position: absolute; /* Position the navbar on top of the hero section */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 10; /* Ensure it appears above the hero image */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0; /* Remove padding */
+    box-shadow: none; /* Remove box shadow */
+}
+
+header .logo {
+    margin-left: 20px; /* Add spacing on the left for the logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #DEE0E4; /* Logo text color */
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between menu items */
+    margin-right: 20px; /* Add spacing on the right for the menu */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #DEE0E4; /* Ensure text is visible on the semi-transparent background */
+    text-decoration: none;
+    padding: 10px;
+}
+
+header nav ul li a:hover {
+    color: #f9680e; /* Accent color on hover */
+}
+
+/* Hero Section */
+.hero {
+    width: 100%; /* Full width of the screen */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('hero-image.jpg') no-repeat center center/cover; /* Background image */
+    color: #DEE0E4; /* Primary text color */
+    position: relative; /* Ensure the navbar and content can be positioned on top */
+    padding: 0; /* Remove top and bottom padding */
+}
+
+/* Hero Content */
+.hero h1,
+.hero p,
+#cta-button {
+    position: relative; /* Position content relative to the hero section */
+    z-index: 2; /* Ensure content appears above the background image */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Adjust font size for the heading */
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 1.5rem; /* Adjust font size for the paragraph */
+    margin-bottom: 20px;
+}
+
+#cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #f9680e; /* Accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cta-button:hover {
+    background-color: #d8560c; /* Darker accent color on hover */
+}
+
+/* Overlay Effect for Better Text Visibility */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent overlay */
+    z-index: 1; /* Place the overlay below the text and button */
+}
+
+.hero-image {
+    width: 100%; /* Make the image container span the full width */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.hero-image img {
+    width: 100%; /* Make the image span the full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Button Styling */
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f9680e; /* Accent */
+    color: #DEE0E4; /* Primary */
+    border: none;
+    font-size: 16px;
+}
+
+#theme-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #DEE0E4;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+#theme-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #293040;
+    color: #DEE0E4;
+    padding: 10px;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.carousel-slide img {
+    width: 150px; /* Set the width to match the SAEEC logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; /* Ensure the image fits within the dimensions */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Banner Container */
+.banner-container {
+    width: 80%; /* Restrict the width of the banner */
+    margin: 0 auto; /* Center the banner */
+    padding: 20px 0; /* Add vertical padding */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align the logos */
+    gap: 20px; /* Space between logos */
+    background-color: #f0f0f0; /* Optional background color */
+}
+
+/* Scrolling Banner Styles */
+.scrolling-banner {
+    overflow: hidden;
+    width: 100%; /* Full width of the container */
+    background-color: #f0f0f0; /* Optional background color */
+    padding: 10px 0;
+}
+
+.scrolling-track {
+    display: flex;
+    gap: 20px; /* Space between logos */
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+}
+
+.scrolling-track img {
+    width: 150px; /* Match the SAEEC logo size */
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.scrolling-track img:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo */
+    filter: brightness(1.2); /* Brighten the logo */
+    border: 2px solid #f9680e; /* Add accent color border */
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-calc(150px * 3 + 40px * 2)); /* Scroll 3 logos + gaps */
+    }
+}
+
+/* General Section Styling */
+section {
+    width: 80%; /* Match the width of the logo banner */
+    margin: 0 auto; /* Center the section */
+    padding: 20px 0; /* Add vertical padding */
+}
+
+/* Center Align Section Titles */
+section h2 {
+    text-align: center;
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+/* Contact Section Container */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsiveness */
+    gap: 20px; /* Space between columns */
+    width: 80%; /* Match the width of other sections */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Map Container */
+.map-container {
+    flex: 1; /* Take up half the width */
+    min-width: 300px; /* Ensure a minimum width for smaller screens */
+    height: 400px; /* Set a fixed height for the map */
+    border: 2px solid #f0f0f0; /* Optional border for styling */
+    border-radius: 5px; /* Optional rounded corners */
+    overflow: hidden; /* Ensure the map fits within the container */
+}
+
+/* Contact Form */
+#contact-form {
+    flex: 1; /* Take up half the width */
+    min-width: 300px; /* Ensure a minimum width for smaller screens */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form elements */
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #f9680e; /* Accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#contact-form button:hover {
+    background-color: #d8560c; /* Darker accent color on hover */
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%; /* Match the width of other sections */
+}
+
+.service-card {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px; /* Enable 3D effect for flipping */
+    cursor: pointer;
+}
+
+.service-card .card-front,
+.service-card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease, color 0.3s ease; /* Added color transition */
+}
+
+.service-card .card-front {
+    background-color: #f3f1eff1;
+    color: black; /* Default font color for light mode */
+}
+
+.service-card .card-back {
+    background-color: #f9680e; /* Accent color */
+    color: white; /* Default font color for light mode */
+    transform: rotateY(180deg);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .service-card .card-front,
+body.dark-mode .service-card .card-back {
+    color: white; /* Change font color to white in dark mode */
+}
+
+body.dark-mode .service-card .card-front {
+    background-color: black; /* Change front card background to black in dark mode */
+    color: white; /* Ensure text is visible in dark mode */
+}
+
+body.dark-mode .service-card .card-back {
+    /* Keep the back card styles unchanged */
+    background-color: #f9680e; /* Accent color */
+    color: white;
+}
+
+.service-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.service-card:hover .card-back {
+    transform: rotateY(0);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+}
+
+.service-card p {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.service-card ul li {
+    margin: 5px 0;
+}

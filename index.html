@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine on Nexus Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                🌞
+            </button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-image">
+            <img src="23.jpg" alt="Hero Image" class="responsive-image">
+        </div>
+        <h1>Welcome to Nine on Nexus Media</h1>
+        <p>Bringing your brand to life through photography and web design.</p>
+        <button id="cta-button">Get Started</button>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="card-front">
+                    <i class="service-icon">💻</i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and modern websites.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>Responsive Design</li>
+                        <li>SEO Optimization</li>
+                        <li>E-commerce Solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="card-front">
+                    <i class="service-icon">📸</i>
+                    <h3>Photography</h3>
+                    <p>Capturing moments that matter.</p>
+                </div>
+                <div class="card-back">
+                    <h3>Photography</h3>
+                    <ul>
+                        <li>Portrait</li>
+                        <li>Corporate Headshots</li>
+                        <li>Event & Workshop Coverage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Companies We've Worked With</h2>
+        <div class="banner-container">
+            <div class="scrolling-track">
+                <img src="2021_06_16_eKasiLab_Programme.jpg" alt="The Innovation Hub">
+                <img src="HCF-Foundation-Logo.jpg" alt="The Heavy Chef Foundation">
+                <img src="Lenaka colour - black letter left transparent.png" alt="Lenaka Business Consulting">
+                <img src="saeec-header-logo.png" alt="SAEEC">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <!-- Map Section -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.073536258929!2d28.20068431502792!3d-25.77076498363671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561f1b6c7e7b5%3A0x8c7b5b5b5b5b5b5b!2s30%20Muckleneuk%2C%20Pretoria%2C%20Gauteng%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1683123456789!5m2!1sen!2sza" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <!-- Contact Form Section -->
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Operating Hours: Mon - Fri, 9am - 5pm</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="icons/instagram.svg" alt="Instagram Logo">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="icons/linkedin.svg" alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub">
+                <img src="icons/github.svg" alt="GitHub Logo">
+            </a>
+        </div>
+        <p>&copy; 2025 Nine on Nexus Media. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
